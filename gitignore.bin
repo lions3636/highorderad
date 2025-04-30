@@ -1,0 +1,7 @@
+# 기본 웹 프로젝트용 .gitignore
+
+.DS_Store
+node_modules/
+dist/
+*.log
+*.zip

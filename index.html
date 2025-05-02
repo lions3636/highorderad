@@ -4,29 +4,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KT 하이오더 홍보</title>
+  <title>KT 하이오더 소개</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background: #f9f9f9;
       margin: 0;
-      padding: 0;
-      color: #333;
+      font-family: Arial, sans-serif;
     }
-    header {
-      background: #005fcc;
-      color: white;
+    .swiper {
+      width: 100%;
+      height: 100vh;
+    }
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       padding: 2rem;
+      box-sizing: border-box;
+    }
+    .slide1 {
+      background-color: #005fcc;
+      color: white;
       text-align: center;
     }
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+    .slide2 {
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+    }
+    .slide2 img {
+      max-width: 80%;
+      border-radius: 10px;
+      margin-top: 2rem;
     }
     .cta-btn {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 2rem;
       padding: 1rem 2rem;
       background-color: #005fcc;
       color: white;
@@ -34,58 +48,51 @@
       border-radius: 8px;
       font-size: 1.2rem;
     }
-    .image-container {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .image-container img {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .description {
-      margin-top: 2rem;
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>KT 하이오더</h1>
-    <p>스마트한 주문 솔루션, KT 하이오더를 소개합니다!</p>
-  </header>
-  <section>
-    <h2>무인 주문의 혁신</h2>
-    <p>하이오더는 소상공인을 위한 스마트한 무인 주문/결제 시스템입니다.</p>
-
-    <div class="image-container">
-      <img src="kiosk-image.jpg" alt="KT 하이오더 키오스크 이미지" />
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide slide1">
+        <h1>KT 하이오더</h1>
+        <p>스마트한 주문 솔루션, 하이오더</p>
+        <a href="tel:01033957700" class="cta-btn">장지호 과장에게 전화하기</a>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide slide2">
+        <h2>키오스크 이미지</h2>
+        <p>하이오더는 직관적인 인터페이스와 편리한 주문 시스템을 제공합니다.</p>
+        <img src="kiosk-image.jpg" alt="하이오더 키오스크 이미지" />
+      </div>
+    
+      <!-- Slide 3 -->
+      <div class="swiper-slide slide1">
+        <h2>소상공인 프랜차이즈 패키지</h2>
+        <p>
+          KT 하이오더는 소상공인 및 프랜차이즈를 위한 맞춤형 패키지를 제공합니다.<br/>
+          합리적인 가격, 쉬운 설치, 그리고 안정적인 관리까지 한 번에!
+        </p>
+        <ul style="text-align: left; max-width: 600px;">
+          <li>· 무인 키오스크 + 모바일 연동</li>
+          <li>· 매장 주문, 포장, 배달 통합 지원</li>
+          <li>· 실시간 주문 관리 및 통계 제공</li>
+        </ul>
+        <a href="tel:01033957700" class="cta-btn">상담 문의하기</a>
+      </div>
     </div>
+    <!-- 페이징 및 내비게이션 -->
 
-    <div class="description">
-      <p>
-        KT 하이오더는 소상공인을 위한 키오스크 기반의 주문/결제 솔루션입니다.<br/>
-        고객은 매장에 설치된 터치스크린을 통해 손쉽게 메뉴를 선택하고 결제를 완료할 수 있으며,
-        매장주는 효율적인 주문 관리와 인건비 절감 효과를 얻을 수 있습니다.<br/>
-        하이오더는 배달·포장·매장 이용까지 모두 지원하며, KT의 안정적인 네트워크 기반으로 운영됩니다.
-      </p>
-    </div>
+    <div class="swiper-pagination"></div>
+  </div>
 
-    <div class="description">
-      <h3>하이오더의 주요 장점</h3>
-      <ul>
-        <li><strong>인건비 절감:</strong> 무인 주문 시스템으로 직원 부담 최소화</li>
-        <li><strong>빠르고 쉬운 주문:</strong> 직관적인 UI로 누구나 간편하게 사용</li>
-        <li><strong>다양한 주문 방식:</strong> 포장·매장·배달 주문까지 모두 지원</li>
-        <li><strong>KT 네트워크 기반:</strong> 안정적인 서비스 운영</li>
-        <li><strong>모바일 연동:</strong> 스마트폰과도 연결되어 매장 운영 효율 UP</li>
-      </ul>
-    </div>
-
-    <a href="tel:01033957700" class="cta-btn">장지호 과장에게 전화하기: 010-3395-7700</a>
-  </section>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
 </body>
 </html>

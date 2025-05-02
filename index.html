@@ -10,7 +10,15 @@
             font-family: 'Arial', sans-serif;
             overflow-x: hidden;
         }
+        .slides {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            width: 100vw;
+            height: 100vh;
+        }
         .slide {
+            flex: none;
             width: 100vw;
             height: 100vh;
             display: flex;
@@ -39,19 +47,18 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
-        section {
-            scroll-snap-type: y mandatory;
-            height: 100vh;
-            overflow-y: scroll;
+        ul {
+            font-size: 24px;
+            line-height: 1.8;
         }
     </style>
 </head>
 <body>
-    <section>
+    <div class="slides">
         <div class="slide">
             <img src="kt_logo_white_bg.png" alt="KT 로고" class="logo">
             <h2>KT 하이오더 장점</h2>
-            <ul style="font-size: 24px; line-height: 1.8;">
+            <ul>
                 <li>무인 주문 간편화</li>
                 <li>소상공인 운영비 절감</li>
                 <li>프랜차이즈 확장 최적화</li>
@@ -65,8 +72,8 @@
         </div>
         <div class="slide">
             <h2>프랜차이즈 패키지</h2>
-            <p>KT 하이오더는 프랜차이즈를 위한 통합 솔루션을 제공합니다. 광고, 주문, 고객 관리까지 한 번에!</p>
+            <p style="font-size: 22px;">KT 하이오더는 프랜차이즈를 위한 통합 솔루션을 제공합니다. 광고, 주문, 고객 관리까지 한 번에!</p>
         </div>
-    </section>
+    </div>
 </body>
 </html>

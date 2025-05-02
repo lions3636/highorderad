@@ -7,6 +7,14 @@
   <title>KT 하이오더 소개</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
+    @keyframes fadeScale {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .kt-logo {
+      animation: fadeScale 1s ease-out forwards;
+      opacity: 0;
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -24,13 +32,13 @@
       box-sizing: border-box;
     }
     .slide1 {
-      background-color: #005fcc;
-      color: white;
+      background-color: transparent;
+      color: #000;
       text-align: center;
     }
     .slide2 {
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: transparent;
+      color: #000;
       text-align: center;
     }
     .slide2 img {
@@ -42,8 +50,8 @@
       display: inline-block;
       margin-top: 2rem;
       padding: 1rem 2rem;
-      background-color: #005fcc;
-      color: white;
+      background-color: #FFD700;
+      color: black;
       text-decoration: none;
       border-radius: 8px;
       font-size: 1.2rem;
@@ -52,7 +60,12 @@
 </head>
 <body>
   <div class="swiper">
-    <div class="swiper-wrapper">
+    
+  <div style="text-align:center; padding: 1rem;">
+    <img class="kt-logo" src="https://upload.wikimedia.org/wikipedia/commons/8/88/KT_logo.svg" alt="KT 로고" style="height: 80px;"/>
+  </div>
+  <div class="swiper-wrapper">
+
       <!-- Slide 1 -->
       <div class="swiper-slide slide1">
         <h1>KT 하이오더</h1>
